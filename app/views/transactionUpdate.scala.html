@@ -1,0 +1,39 @@
+@* addProductForm defined above is the parameter passed to this view by the controller *@
+@import helper._
+
+@(UsersLibraryForm: play.data.Form[models.Users_library], user: models.users.Users)
+
+@* helpers will be used to create the form dynamically, though static HTML form element also work. *@
+
+
+@main("Update Transaction", user) {
+	<h3>Add a new Product</h3>
+
+
+	<!-- Use the views.html.helpers package to create the form -->
+	@form(action = routes.HomeController.addTransactionSubmit(), 'class -> "form-horizontal", 'role->"form") {
+
+
+
+
+        @inputText(UsersLibraryForm("Id"), '_label -> "Id",'class -> "form-control")
+        @inputText(UsersLibraryForm("User_product_id"), '_label -> "User_product_id",'class -> "form-control")
+        @inputText(UsersLibraryForm("User_email"), '_label -> "User_email",'class -> "form-control")
+        @inputDate(UsersLibraryForm("Date_transaction"), '_label -> "Date_transaction",'class -> "form-control")
+        @inputDate(UsersLibraryForm("Expiring_date"), '_label -> "Expiring_date",'class -> "form-control")
+
+
+
+
+
+	<!-- Add a submit button -->
+  <div class="actions">
+      <input type="submit" value="Save" class="btn btn-primary">
+			<a href="@routes.HomeController.transactionUpdate()">
+				
+				<button class="btn btn-warning">Cancel</button>
+	  		</a>
+  </div>
+	} <!-- End Form definition -->
+}
+-- End of page content -->

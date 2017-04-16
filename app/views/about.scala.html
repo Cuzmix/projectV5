@@ -1,0 +1,22 @@
+@(user: models.users.Users)
+<!-- Pass page title and content {html between braces} to the main view -->
+@main("About", user) {
+    <!-- HTML content for the index view -->
+    <div class="row">
+        <div class="col-sm-12">
+                <!-- Header -->
+            <header id="header" class="alt">
+                <h1><a href="index.html"><span class="glyphicon glyphicon-book"></span> DUT Library</a></h1>
+                <nav>
+                    <a href="#menu">Menu</a>
+                </nav>
+            </header>
+
+                    <!-- Four -->
+                <section id="four" class="wrapper alt style1">
+                    <iframe name='playframe' height="1000px" width="100%" src=@routes.HomeController.rent()></iframe>
+                </section>
+
+        </div>
+    </div>
+}

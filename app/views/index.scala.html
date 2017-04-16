@@ -1,0 +1,105 @@
+@(user: models.users.Users)
+
+<!-- Pass page title and content {html between braces} to the main view -->
+@main("Home", user) {
+  <!-- HTML content for the index view -->
+  <div class="row">
+      <div class="col-sm-12">
+              <!-- Header -->
+          <header id="header" class="alt">
+              <h1><a href="index.html"><span class="glyphicon glyphicon-book"></span> DUT Library</a></h1>
+              <nav>
+                  <a href="#menu">Menu</a>
+              </nav>
+          </header>
+
+              <!-- Banner -->
+          <section id="banner">
+              <div class="inner">
+                  <h2><span class="glyphicon glyphicon-book"></span> DUT Library</h2>
+                  <p> A service to all our students</p>
+              </div>
+          </section>
+
+              <!-- Wrapper -->
+          <section id="wrapper">
+
+                  <!-- One -->
+              <section id="one" class="wrapper spotlight style1">
+                  <div class="inner">
+                      <a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
+                      <div class="content">
+                          <h2 class="major">Loan products</h2>
+                          <p>Our services provides our student's with a service to burrow our products by using a point system as a currency.</p>
+                          <a href="#" class="special">Have a look</a>
+                      </div>
+                  </div>
+              </section>
+
+                  <!-- Two -->
+              <section id="two" class="wrapper alt spotlight style2">
+                  <div class="inner">
+                      <a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
+                      <div class="content">
+                          <h2 class="major">Open for all students</h2>
+                          <p>everyone except for animu ppl.</p>
+                          <a href="#" class="special">Learn more</a>
+                      </div>
+                  </div>
+              </section>
+
+                  <!-- Three -->
+              <section id="three" class="wrapper spotlight style3">
+                  <div class="inner">
+                      <a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
+                      <div class="content">
+                          <h2 class="major">Products ranging from hardware to software</h2>
+                          <p>exampls of our products are gud..</p>
+                          <a href="#" class="special">Learn more</a>
+                      </div>
+                  </div>
+              </section>
+
+                  <!-- Four -->
+              <section id="four" class="wrapper alt style1">
+                  <div class="inner">
+                      <h2 class="major">Meet our Staff</h2>
+                      <p>This is our friendly staff :)</p>
+                      <section class="features">
+                          <article>
+                              <a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
+                              <h3 class="major">Jehan the great</h3>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+                              <a href="#" class="special">Learn more</a>
+                          </article>
+                          <article>
+                              <a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
+                              <h3 class="major">Mango agwu</h3>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+                              <a href="#" class="special">Learn more</a>
+                          </article>
+                          <article>
+                              <a href="#" class="image"><img src="images/pic06.jpg" alt="" /></a>
+                              <h3 class="major">Saitama kapuku</h3>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+                              <a href="#" class="special">Learn more</a>
+                          </article>
+                          <article>
+                              <a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
+                              <h3 class="major">stronk boi</h3>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+                              <a href="#" class="special">Learn more</a>
+                          </article>
+                      </section>
+                      <ul class="actions">
+                          <li><a href="#" class="button">Browse All</a></li>
+                      </ul>
+                  </div>
+              </section>
+
+          </section>
+      </div>
+  </div>
+  <!-- End of content for main -->
+}
+

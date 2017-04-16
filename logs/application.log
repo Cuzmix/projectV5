@@ -1,0 +1,24 @@
+2017-04-17 00:22:00,177 [INFO] from application in ForkJoinPool-1-worker-1 - Creating Pool for datasource 'default'
+2017-04-17 00:22:00,646 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-1 - Database [default] connected at jdbc:h2:file:./data/ProjectDB
+2017-04-17 00:22:02,093 [INFO] from application in ForkJoinPool-1-worker-1 - ApplicationTimer demo: Starting application at 2017-04-16T23:22:02.092Z
+2017-04-17 00:22:03,037 [INFO] from play.api.Play in ForkJoinPool-1-worker-1 - Application started (Dev)
+2017-04-17 00:23:11,598 [INFO] from application in application-akka.actor.default-dispatcher-30 - ApplicationTimer demo: Stopping application at 2017-04-16T23:23:11.597Z after 69s.
+2017-04-17 00:23:11,601 [INFO] from application in application-akka.actor.default-dispatcher-30 - Shutting down connection pool.
+2017-04-17 00:23:11,731 [INFO] from application in application-akka.actor.default-dispatcher-30 - Creating Pool for datasource 'default'
+2017-04-17 00:23:11,756 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-30 - Database [default] connected at jdbc:h2:file:./data/ProjectDB
+2017-04-17 00:23:11,820 [INFO] from application in application-akka.actor.default-dispatcher-30 - ApplicationTimer demo: Starting application at 2017-04-16T23:23:11.820Z
+2017-04-17 00:23:11,905 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-30 - Application started (Dev)
+2017-04-17 00:23:12,788 [INFO] from application in application-akka.actor.default-dispatcher-6 - ApplicationTimer demo: Stopping application at 2017-04-16T23:23:12.788Z after 1s.
+2017-04-17 00:23:12,789 [INFO] from application in application-akka.actor.default-dispatcher-6 - Shutting down connection pool.
+2017-04-17 00:23:12,898 [INFO] from application in application-akka.actor.default-dispatcher-6 - Creating Pool for datasource 'default'
+2017-04-17 00:23:12,925 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-6 - Database [default] connected at jdbc:h2:file:./data/ProjectDB
+2017-04-17 00:23:12,973 [INFO] from application in application-akka.actor.default-dispatcher-6 - ApplicationTimer demo: Starting application at 2017-04-16T23:23:12.972Z
+2017-04-17 00:23:13,045 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-6 - Application started (Dev)
+2017-04-17 00:24:06,658 [INFO] from application in application-akka.actor.default-dispatcher-3 - ApplicationTimer demo: Stopping application at 2017-04-16T23:24:06.658Z after 54s.
+2017-04-17 00:24:06,658 [INFO] from application in application-akka.actor.default-dispatcher-3 - Shutting down connection pool.
+2017-04-17 00:24:06,759 [INFO] from application in application-akka.actor.default-dispatcher-3 - Creating Pool for datasource 'default'
+2017-04-17 00:24:06,775 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-3 - Database [default] connected at jdbc:h2:file:./data/ProjectDB
+2017-04-17 00:24:06,821 [INFO] from application in application-akka.actor.default-dispatcher-3 - ApplicationTimer demo: Starting application at 2017-04-16T23:24:06.821Z
+2017-04-17 00:24:06,890 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-3 - Application started (Dev)
+2017-04-17 00:24:40,213 [INFO] from application in pool-4-thread-6 - ApplicationTimer demo: Stopping application at 2017-04-16T23:24:40.213Z after 34s.
+2017-04-17 00:24:40,214 [INFO] from application in pool-4-thread-6 - Shutting down connection pool.

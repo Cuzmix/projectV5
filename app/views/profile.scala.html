@@ -1,0 +1,95 @@
+@(users: List[models.users.Users], products: List[models.Product], Transactions: List[models.Users_library],user: models.users.Users)
+
+<!-- Pass page title and content {html between braces} to the main view -->
+@main("Users", user) {
+    <!-- HTML content for the index view -->
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="panel panel-default" style = "color: black">
+                <div class="panel-heading">
+                    <h4 class="SubTitles">@user.getName() Profile</h4>
+                </div>
+                <div class="panel-body">
+                    @if(flash.containsKey("success")) {
+                        <div class="alert alert-success">
+                        @flash.get("success")
+                        </div>
+                    }
+                    <table class="table table-bordered table-hover table-condensed">
+                        <thead>
+                                <!-- The header row-->
+                            <tr>
+                                <th style = "color: black">Email</th>
+                                <th style = "color: black">Name</th>
+                                <th style = "color: black">Address</th>
+                                <th style = "color: black">Number</th>
+                                <th style = "color: black">Password</th>
+                                <th style = "color: black">Points</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                <!-- Product row(s) -->
+                                <!-- Start of For loop - For each p in products add a row -->
+
+                            <tr>
+                                <td>@user.getEmail</td>
+                                <td>@user.getName</td>
+                                <td>@user.getAddress</td>
+                                <td>@user.getNumber</td>
+                                <td>@user.getPassword</td>
+                                <td>@user.getPoints</td>
+
+                                <td>
+                                    <a href="@routes.HomeController.updateProfile(user.getEmail)" class="btn-xs btn-danger">
+                                        <span class="glyphicon glyphicon-pencil"></span></a>
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <table class="table table-bordered table-hover table-condensed">
+                        <thead>
+                            <h1> Loaned Items </h1>
+                                <!-- The header row-->
+
+                            <tr>
+                                <th style = "color: black">ID</th>
+                                <th style = "color: black">Product ID</th>
+                                <th style = "color: black">User Email</th>
+                                <th style = "color: black">Date Of transaction </th>
+                                <th style = "color: black">Expire Date</th>
+
+                            </tr>
+
+
+                            @for(p <- Transactions){
+                                @if(p.getUser_email.equalsIgnoreCase(user.getEmail)){
+                                    <tr>
+                                        <td>@p.getId</td>
+                                        <td>@p.getUser_product_id</td>
+                                        <td>@p.getUser_email</td>
+                                        <td>@p.getDate_transaction</td>
+                                        <td>@p.getExpiring_date</td>
+
+                                        <td>
+                                            <a href="@routes.HomeController.updateTransaction(p.getId)" class="btn-xs btn-danger">
+                                                <span class="glyphicon glyphicon-pencil"></span></a>
+                                        </td>
+                                    </tr>
+                                }
+                            }
+
+                        </thead>
+                        <tbody>
+                                <!-- Product row(s) -->
+                                <!-- Start of For loop - For each p in products add a row -->
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+</div>
+}
