@@ -119,10 +119,11 @@ public class Users extends Model {
     }
 
     public void setPoints(int amount){
-        if(points > 100){
+        if(amount > 100){
+
             points = 100;
         }else {
-             points = points - amount;
+             points = amount;
         }
     }
 

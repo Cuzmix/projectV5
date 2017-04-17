@@ -131,6 +131,9 @@ public class AdminController extends Controller {
 
         // Extract the product from the form object
         Product p = newProductForm.get();
+        System.out.print("@@@@@@@@@@@@@@@@@@@"+p.getQuantity());
+
+
 
         if (p.getId() == null) {
             // Save to the database via Ebean (remember Product extends Model)
@@ -138,7 +141,8 @@ public class AdminController extends Controller {
         }
         // Product already exists so update
         else {
-            p.setStock(p.getStock()+7);
+            System.out.print(p.getQuantity());
+
             p.update();
         }
 

@@ -88,7 +88,7 @@ public class Product extends Model {
     }
 
     public int getStock() {
-        return stock - quantity;
+        return stock;
     }
 
     public void setStock(int stock) {

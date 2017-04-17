@@ -201,6 +201,7 @@ public class HomeController extends Controller {
         return ok(loan.render(addLoanForm, getUserFromSession()));
     }
 
+    /*
     @Security.Authenticated(Secured.class)
     @Transactional
     public Result addProductSubmit() {
@@ -234,6 +235,8 @@ public class HomeController extends Controller {
         // Redirect to the admin home
         return redirect(controllers.routes.HomeController.products(0));
     }
+
+    */
 
     @Security.Authenticated(Secured.class)
     @Transactional
@@ -340,17 +343,18 @@ public class HomeController extends Controller {
             // check if the user enters the correct loan key
             // if update the items availablity
             }else if(p.getAvailable().equalsIgnoreCase("loaned")){
+
             Product ps = new Product();
 
             //Stock checker
-            if(p.getQuantity() > p.getStock()){
-                p.setQuantity(p.getQuantity());
+            if(ps.getQuantity() > ps.getStock()){
+                ps.setQuantity(ps.getQuantity());
                 flash("success","FAIL: Not enough in stock.");
                 return redirect(controllers.routes.HomeController.rent(0));
             }
 
             //Point checker + deduction
-            if(p.getQuantity() > 1)
+            if(ps.getQuantity() > 1)
             {
                 int multiplyPurchase= p.getQuantity()*10;
 
@@ -364,15 +368,25 @@ public class HomeController extends Controller {
                     un.update();
                 }
             }else
+
+
             {
-                un.setPoints(10);
-                un.update();
+                int multiplyPurchase = p.getQuantity() * 10;
+
+                if (un.getPoints()>0  && un.getPoints()-multiplyPurchase >=0 ) {
+
+
+
+                    un.setPoints(un.getPoints() - multiplyPurchase);
+                    un.update();
+                    p.setStock(p.getStock() - p.getQuantity());
+                    p.update();
+                }
             }
 
 
 
-            p.update();
-            flash("success","Item: " + p.getName() + " has been loaned");
+            flash("success","FAIL: You do not have sufficient points.");
             return redirect(controllers.routes.HomeController.rent(0));
 
             }else {
